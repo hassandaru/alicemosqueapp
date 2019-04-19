@@ -33,7 +33,6 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'tabs/tabprayer',
-    pathMatch: 'full'
   }
 
 ];

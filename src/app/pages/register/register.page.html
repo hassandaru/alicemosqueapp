@@ -24,19 +24,14 @@
       <ion-input class="input-group-text" name="email" placeholder="Email"
                  [(ngModel)]="myProfile.email"></ion-input>
     </ion-item>
-    <!--<ion-item>-->
-    <!--<ion-checkbox checked="true" color="dark">Remain logged in</ion-checkbox>-->
-    <!--<ion-label>Remain logged in</ion-label>-->
-    <!--<br>-->
-    <!--</ion-item>-->
     <ion-item>
-      <ion-checkbox checked="true" color="dark" [(ngModel)]="myProfile.privacyPolicy"> Accept Privacy Policy</ion-checkbox>
+      <ion-checkbox checked="true" color="dark" [(ngModel)]="myProfile.privacyPolicy"></ion-checkbox>
       <ion-label> Accept Privacy Policy</ion-label>
       <br>
     </ion-item>
     <ion-item>
-      <ion-checkbox color="dark" [(ngModel)]="myProfile.newssubscribe"> Register to be notified for news.</ion-checkbox>
-      <ion-label> Register to be notified for news.</ion-label>
+      <ion-checkbox color="dark" [(ngModel)]="myProfile.newssubscribe"></ion-checkbox>
+      <ion-label> Register for news</ion-label>
     </ion-item>
   </ion-list>
   <ion-button color="success" size="small" shape="round" (click)="profilePage()">REGISTER

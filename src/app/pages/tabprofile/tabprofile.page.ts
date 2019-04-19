@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import {Profile} from '../../Classes/profile';
+import {RegisterPageModule} from '../register/register.module';
+import { ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-tabprofile',
@@ -8,29 +10,22 @@ import {Profile} from '../../Classes/profile';
   styleUrls: ['./tabprofile.page.scss'],
 })
 export class TabprofilePage implements OnInit {
-    constructor() { }
 
-    ngOnInit() {
-    }
-  // myprofile: Profile;
-  // constructor(private route: ActivatedRoute) { }
-  //
-  // ngOnInit() {
-  //   // this.route.params.subscribe(
-  //   //     params => {
-  //   //       this.myprofile.firstName = params['firstName'],
-  //   //       this.myprofile.lastName = params['lastName'],
-  //   //       this.myprofile.mobile = params['mobile'],
-  //   //       this.myprofile.email = params['email'],
-  //   //       this.myprofile.newssubscribe = params['newssubscribe'],
-  //   //       this.myprofile.privacyPolicy = params['privacyPolicy']
-  //   //     });
-  //   this.myprofile.firstName = this.route.snapshot.paramMap.get('firstName');
-  //   this.myprofile.lastName = this.route.snapshot.paramMap.get('lastName');
-  //   this.myprofile.mobile = this.route.snapshot.paramMap.get('mobile');
-  //   this.myprofile.email = this.route.snapshot.paramMap.get('email');
-  //   this.myprofile.newssubscribe = this.route.snapshot.paramMap.get('newssubscribe') === '1';
-  //   this.myprofile.privacyPolicy = this.route.snapshot.paramMap.get('privacyPolicy') === '1';
-  // }
+  myprofile: Profile;
+  constructor(private route: ActivatedRoute) {
+      this.myprofile = new Profile();
+  }
+
+  ngOnInit() {
+      this.route.queryParams.subscribe(
+        params => {
+                  this.myprofile.firstName = params['firstName'];
+                  this.myprofile.lastName = params['lastName'];
+                  this.myprofile.mobile = params['mobile'];
+                  this.myprofile.email = params['email'];
+                  this.myprofile.privacyPolicy = params['privacyPolicy'] === '1';
+                  this.myprofile.newssubscribe = params['newssubscribe'] === '1';
+        });
+  }
 
 }
