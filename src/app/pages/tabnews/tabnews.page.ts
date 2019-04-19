@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {News} from '../../Classes/news';
+import {NewsService} from '../../Services/news.service';
 
 @Component({
   selector: 'app-tabnews',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabnews.page.scss'],
 })
 export class TabnewsPage implements OnInit {
-
-  constructor() { }
+  mynews: News[];
+  constructor(private newsService: NewsService) { }
+  getNews(): void  {
+    this.newsService.getNews().subscribe(newsList => this.mynews = newsList);
+  }
 
   ngOnInit() {
+    this.getNews();
   }
 
 }

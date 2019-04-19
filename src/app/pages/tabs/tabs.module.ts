@@ -29,7 +29,13 @@ const routes: Routes = [
         loadChildren: '../tabprofile/tabprofile.module#TabprofilePageModule'
       }
     ]
+  },
+  {
+    path: '',
+    redirectTo: 'tabs/tabprayer',
+    pathMatch: 'full'
   }
+
 ];
 
 @NgModule({
