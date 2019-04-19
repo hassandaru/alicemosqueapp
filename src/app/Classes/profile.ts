@@ -1,10 +1,11 @@
 export class Profile {
-    firstName: string = '';
-    lastName: string = '';
-    mobile: string = '';
-    email: string = '';
-    privacyPolicy = true;
-    newssubscribe: boolean;
+    firstName;
+    lastName;
+    mobile;
+    email;
+    privacyPolicy;
+    newssubscribe;
+
     constructor(firstName = '', lastName = '', mobile = '', email = '', privacyPolicy = true, newssubscribe = false) {
         this.firstName = firstName;
         this.lastName = lastName;

@@ -1,26 +1,27 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {Routes, RouterModule} from '@angular/router';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { TabprofilePage } from './tabprofile.page';
+import {TabprofilePage} from './tabprofile.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: TabprofilePage
-  }
+    {
+        path: '',
+        component: TabprofilePage
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [TabprofilePage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [TabprofilePage]
 })
-export class TabprofilePageModule {}
+export class TabprofilePageModule {
+}

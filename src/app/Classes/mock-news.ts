@@ -1,4 +1,4 @@
-import { News } from './news';
+import {News} from './news';
 
 export const NewsList: News[] = [
     {

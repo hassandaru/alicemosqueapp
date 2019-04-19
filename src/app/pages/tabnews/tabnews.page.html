@@ -1,16 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>News</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>News</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row class="ion-float-left" *ngFor="let news of mynews">
-      Heading: {{news.heading}}<br>
-      Date: {{news.date}}<br>
-      Description: {{news.description}}<br>
-      <hr />
-    </ion-row>
-  </ion-grid>
+    <ion-grid>
+        <ion-row class="ion-float-left" *ngFor="let news of mynews">
+            Heading: {{news.heading}}<br>
+            Date: {{news.date}}<br>
+            Description: {{news.description}}<br>
+            <ion-item lines="full"></ion-item>
+        </ion-row>
+    </ion-grid>
 </ion-content>

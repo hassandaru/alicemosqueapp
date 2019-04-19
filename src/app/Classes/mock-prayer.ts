@@ -1,4 +1,4 @@
-import { Prayer } from './prayer';
+import {Prayer} from './prayer';
 
 export const Prayers: Prayer[] = [
     {name: 'FAJR', time: '05:30 AM'},

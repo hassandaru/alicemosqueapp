@@ -1,14 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Prayer Timings</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Prayer Timings</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+    <ion-grid>
         <ion-row *ngFor="let prayer of prayers">
-          <ion-col class="ion-float-left">{{prayer.name}}</ion-col>
-          <ion-col class="ion-float-right">{{prayer.time}}</ion-col>
+            <ion-col class="ion-float-left">{{prayer.name}}</ion-col>
+            <ion-col class="ion-float-right">{{prayer.time}}</ion-col>
         </ion-row>
-  </ion-grid>
+    </ion-grid>
 </ion-content>
