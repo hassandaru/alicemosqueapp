@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import {NavigationExtras, Router} from '@angular/router';
 import {Profile} from '../../Classes/profile';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,8 @@ export class RegisterPage implements OnInit {
     this.router.navigate(['privacy']);
   }
   profilePage() {
-    this.router.navigateByUrl('tabs');
+
+    this.router.navigateByUrl('tabs/tabprayer');
   }
   ngOnInit() {
   }
